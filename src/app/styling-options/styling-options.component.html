@@ -1,0 +1,46 @@
+<div class="input-group">
+  <label class="label">Font Size:</label>
+  <input type="number" [(ngModel)]="fontSize" placeholder="Enter font size" (ngModelChange)="onStyleChange()" />
+</div>
+<div class="input-group">
+  <label class="label">Font Style:</label>
+  <select [(ngModel)]="fontStyle" (ngModelChange)="onStyleChange()">
+    <option value="normal">Normal</option>
+    <option value="italic">Italic</option>
+  </select>
+</div>
+<div class="input-group">
+  <label class="label">Font Weight:</label>
+  <select [(ngModel)]="fontWeight" (ngModelChange)="onStyleChange()">
+    <option value="normal">Normal</option>
+    <option value="bold">Bold</option>
+  </select>
+</div>
+<div class="input-group">
+  <label class="label">Font Family:</label>
+  <select [(ngModel)]="fontFamily" (ngModelChange)="onStyleChange()">
+    <option *ngFor="let font of fontList" [value]="font">{{ font }}</option>
+  </select>
+</div>
+<div class="input-group">
+  <label class="label">Underline:</label>
+  <input type="checkbox" [(ngModel)]="isUnderline" (ngModelChange)="onStyleChange()" />
+</div>
+<div class="input-group">
+  <label class="label">Text Color:</label>
+  <input type="color" [(ngModel)]="textColor" (ngModelChange)="onStyleChange()" />
+</div>
+<div class="input-group">
+  <label class="label">Background Color:</label>
+  <input type="color" [(ngModel)]="backgroundColor" (ngModelChange)="onStyleChange()" />
+</div>
+<div class="input-group">
+  <label class="label">Text Alignment:</label>
+  <select [(ngModel)]="textAlign" (ngModelChange)="onStyleChange()">
+    <option value="left">Left</option>
+    <option value="center">Center</option>
+    <option value="right">Right</option>
+  </select>
+</div>
+
+<!-- Add more styling options as needed -->

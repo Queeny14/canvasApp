@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .vertical-split {
+    display: flex;
+    flex: 1;
+  }
+  
+  .left-pane {
+    flex: 1;
+    background-color: lightgray; /* Adjust the background color as needed */
+    padding: 10px;
+  }
+  
+  .center-pane {
+    flex: 2;
+    background-color: white; /* Adjust the background color as needed */
+    padding: 10px;
+  }
+  
+  .right-pane {
+    flex: 1;
+    background-color: lightgray; /* Adjust the background color as needed */
+    padding: 10px;
+  }
+  
+
+  
+  button {
+    margin-bottom: 5px; /* Adjust the margin as needed */
+    margin-right: 5px;
+  }
+  

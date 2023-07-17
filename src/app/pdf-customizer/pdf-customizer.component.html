@@ -1,0 +1,93 @@
+<div class="d-flex justify-content-around">
+  <h3 style="text-align: center; margin: 2%; margin-top: 2%; color: navy;">PDF Customizer</h3>
+  
+</div>
+<div class="d-flex justify-content-end">
+  <button class="btn btn-success" (click)="downloadPDF()">Download PDF</button>
+</div>
+
+<div class="container">
+  
+  <div class="vertical-split">
+    <div class="left-pane">
+      <app-field-selection (fieldSelected)="selectField($event)"></app-field-selection>
+      <div style="margin-top: 5%;">
+        <button class="btn btn-primary" (click)="addLineToCanvas()">Add Line</button>
+        <button class="btn btn-primary" (click)="addRectangleToCanvas()">Add Rectangle</button>
+        <button class="btn btn-primary" (click)="addLogoToCanvas()">Add Logo</button>
+        <button class="btn btn-primary" (click)="addTextToCanvas()">Add Text</button>
+        <button class="btn btn-danger" (click)="clearCanvas()">Clear Canvas</button>
+      </div>
+      <div>
+        <h4>Styling Options</h4>
+        <div>
+          <label>Font Size:</label>
+          <input type="number" [(ngModel)]="fontSize" (change)="updateSelectedObjectStyle()">
+        </div>
+        <div>
+          <label>Font Style:</label>
+          <select [(ngModel)]="fontStyle" (change)="updateSelectedObjectStyle()">
+            <option value="normal">Normal</option>
+            <option value="italic">Italic</option>
+          </select>
+        </div>
+        <div>
+          <label>Font Weight:</label>
+          <select [(ngModel)]="fontWeight" (change)="updateSelectedObjectStyle()">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+          </select>
+        </div>
+        <div>
+          <label>Text Color:</label>
+          <input type="color" [(ngModel)]="textColor" (change)="updateSelectedObjectStyle()">
+        </div>
+      </div>
+    </div>
+    <div class="center-pane" style="border: 1px solid;" (drop)="dropField($event)" (dragover)="allowDrop($event)">
+      <canvas #canvas></canvas>
+        
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h3 style="text-align: center; margin: 2%; margin-top: 2%; color: navy;">PDF Customizer</h3>
+<div class="container">
+  <div class="vertical-split">
+    <div class="left-pane">
+      <app-field-selection (fieldSelected)="selectField($event)"></app-field-selection>
+      <div style="margin-top: 5%;">
+        <button class="btn btn-primary" (click)="addLineToCanvas()">Add Line</button>
+        <button class="btn btn-primary" (click)="addRectangleToCanvas()">Add Rectangle</button>
+        <button class="btn btn-primary" (click)="addLogoToCanvas()">Add Logo</button>
+        <button class="btn btn-primary" (click)="addTextToCanvas()">Add Text</button>
+        <button class="btn btn-danger" (click)="clearCanvas()">Clear Canvas</button>
+      </div>  
+    </div>
+    <div class="center-pane" style="border: 1px solid;" (drop)="dropField($event)" (dragover)="allowDrop($event)">
+      <canvas #canvas></canvas>
+      <div>
+        <button class="btn btn-success" (click)="downloadPDF()">Download PDF</button>
+      </div>
+    </div>
+    
+  </div>
+</div> -->
